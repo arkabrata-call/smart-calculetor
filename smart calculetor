@@ -1,0 +1,43 @@
+print('''Wllcome to my calculetor ,Do your clculation eaisly, Read the istruction and do proper calculation''')
+
+def calculator(operator, num1, num2):
+    if operator == 1:
+        return num1 + num2
+    elif operator == 2:
+        return num1 - num2
+    elif operator == 3:
+        return num1 * num2
+    elif operator ==4:
+        return num1**2
+    elif operator == 5:
+        if num2 != 0:
+            return num1 / num2
+        else:
+            return "Error: Division by zero!"
+    else:
+        return "Error: Invalid operator!"
+        
+# Taking user input
+print("Press 1 for addition (+)")
+print("Press 2 for subtraction (-)")
+print("Press 3 for multiplication (*)")
+print("Press 4 for squer(num**2)")
+print("Press 5 for division (/)")
+
+operator = int(input("Enter your choice (1/2/3/4/5): "))
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+
+if num1%2==0 and num2%2==0:
+    print("both are even")
+elif num1%2==0 and num2%2!=0:
+    print("num1 is even but num2 is odd")
+elif num1%2!=0 and num2%2==0:
+    print("num1 is odd and num2 is even")
+else:
+    print('both number are odd')
+
+# Calculating and printing result
+result = calculator(operator, num1, num2)
+print("your ans is", result)
+
